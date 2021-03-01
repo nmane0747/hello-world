@@ -24,5 +24,18 @@ pipeline {
       }
     }
 
+    stage('after buzz') {
+      steps {
+        echo 'after buzz'
+      }
+    }
+
+    stage('input') {
+      steps {
+        input(message: 'wait for input', ok: 'go ahead', submitter: 'me', submitterParameter: 'Manager')
+        echo 'agter inpuy'
+      }
+    }
+
   }
 }
