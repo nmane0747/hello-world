@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'helloworld'
+      image 'maven:3-alpine'
     }
 
   }
