@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'helloworld'
+    }
+
+  }
   stages {
     stage('buzzz') {
       parallel {
